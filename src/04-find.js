@@ -13,24 +13,57 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object} A single object.
  */
-function findPinkElephantsByTimestreet(songs) {}
+function findPinkElephantsByTimestreet(songs) {
+  songs.find((song) => {
+    if (song.title === "Pink Elephants"){
+     titleFind = song
+    }
+  }
+  )
+  return titleFind
+}
 
 /**
  * Returns the first song in the list that is under three minutes.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object} A single object.
  */
-function findFirstSongUnderThreeMinutes(songs) {}
+
+// Want to find a better way how to solve this.
+function findFirstSongUnderThreeMinutes(songs) {
+  titleFind =[]
+  songs.find((song) => {
+    if (song.runtimeInSeconds < 180){
+      titleFind.push(song) 
+    }
+  }
+  )
+  return titleFind[0]
+}
 
 /**
  * Returns the first song in the list where the song title equals the song album.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object} A single object.
  */
-function findFirstTitleTrack(songs) {}
+
+// Want to find a better way how to solve this too
+
+function findFirstTitleTrack(songs) {
+titleFind =[]
+songs.find((song) => {
+  if (song.title === song.album){
+    titleFind.push(song) 
+  }
+}
+)
+return titleFind[0]
+}
 
 module.exports = {
   findPinkElephantsByTimestreet,
   findFirstSongUnderThreeMinutes,
   findFirstTitleTrack,
 };
+
+
