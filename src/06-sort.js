@@ -43,7 +43,7 @@ function sortByArtistNameDescending(songs) {
 function sortBySongTitleAscending(songs) {
   return songs.sort((a,b) => a.title.localeCompare(b.title))
 }
-console.log (sortBySongTitleAscending(exampleSongData))
+// console.log (sortBySongTitleAscending(exampleSongData))
 
 module.exports = {
   sortByRuntimeAscending,
